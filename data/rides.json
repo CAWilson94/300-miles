@@ -2,26 +2,71 @@
   "targetMiles": 300,
   "startDate": "2026-07-01",
   "endDate": "2026-07-31",
-  "totalMiles": 62.9,
-  "updatedAt": "2026-07-09T00:00:00.000Z",
+  "totalMiles": 67.8,
+  "updatedAt": "2026-07-09T12:46:30.818Z",
   "rides": [
     {
-      "id": 0,
-      "title": "Café loop (sample)",
-      "date": "2026-07-06",
-      "miles": 38.2,
-      "elevationFt": 1126,
-      "movingSeconds": 5100,
-      "url": "https://www.strava.com/athlete"
+      "id": 19229083842,
+      "title": "Afternoon Ride",
+      "date": "2026-07-08",
+      "miles": 3.3,
+      "elevationFt": 72,
+      "movingSeconds": 1080,
+      "url": "https://www.strava.com/activities/19229083842"
     },
     {
-      "id": 0,
-      "title": "Morning spin (sample)",
+      "id": 19233791872,
+      "title": "67/300",
+      "date": "2026-07-08",
+      "miles": 20,
+      "elevationFt": 384,
+      "movingSeconds": 6796,
+      "url": "https://www.strava.com/activities/19233791872"
+    },
+    {
+      "id": 19219757905,
+      "title": "42/300",
+      "date": "2026-07-07",
+      "miles": 12.6,
+      "elevationFt": 354,
+      "movingSeconds": 4030,
+      "url": "https://www.strava.com/activities/19219757905"
+    },
+    {
+      "id": 19176479921,
+      "title": "25/300 🚴",
+      "date": "2026-07-04",
+      "miles": 5.6,
+      "elevationFt": 118,
+      "movingSeconds": 1877,
+      "url": "https://www.strava.com/activities/19176479921"
+    },
+    {
+      "id": 19178166855,
+      "title": "30/300 🥳",
+      "date": "2026-07-04",
+      "miles": 5.7,
+      "elevationFt": 138,
+      "movingSeconds": 1638,
+      "url": "https://www.strava.com/activities/19178166855"
+    },
+    {
+      "id": 19164624895,
+      "title": "20/300 (miles) 🥳",
       "date": "2026-07-03",
-      "miles": 24.7,
-      "elevationFt": 742,
-      "movingSeconds": 3480,
-      "url": "https://www.strava.com/athlete"
+      "miles": 10.3,
+      "elevationFt": 361,
+      "movingSeconds": 3489,
+      "url": "https://www.strava.com/activities/19164624895"
+    },
+    {
+      "id": 19133674322,
+      "title": "10/300 miles Cancer Research UK",
+      "date": "2026-07-01",
+      "miles": 10.3,
+      "elevationFt": 207,
+      "movingSeconds": 3299,
+      "url": "https://www.strava.com/activities/19133674322"
     }
   ]
 }
