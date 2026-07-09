@@ -1,18 +1,27 @@
 {
-  "month": "2026-07",
   "targetMiles": 300,
+  "startDate": "2026-07-01",
+  "endDate": "2026-07-31",
+  "totalMiles": 62.9,
+  "updatedAt": "2026-07-09T00:00:00.000Z",
   "rides": [
     {
-      "title": "Example morning spin",
-      "date": "2026-07-03",
-      "miles": 24.7,
-      "embedUrl": ""
-    },
-    {
-      "title": "Example cafe loop",
+      "id": 0,
+      "title": "Café loop (sample)",
       "date": "2026-07-06",
       "miles": 38.2,
-      "embedUrl": ""
+      "elevationFt": 1126,
+      "movingSeconds": 5100,
+      "url": "https://www.strava.com/athlete"
+    },
+    {
+      "id": 0,
+      "title": "Morning spin (sample)",
+      "date": "2026-07-03",
+      "miles": 24.7,
+      "elevationFt": 742,
+      "movingSeconds": 3480,
+      "url": "https://www.strava.com/athlete"
     }
   ]
 }

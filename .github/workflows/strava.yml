@@ -1,0 +1,45 @@
+name: Update Strava ride data
+
+on:
+  schedule:
+    # Runs every 6 hours (UTC). Adjust or remove as you like.
+    - cron: "0 */6 * * *"
+  workflow_dispatch: {} # lets you run it manually from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Fetch rides from Strava
+        env:
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+          # ---- Challenge config (edit these) ----
+          TARGET_MILES: "300"
+          START_DATE: "2026-07-01"
+          END_DATE: "2026-07-31"
+        run: node scripts/fetch-strava.mjs
+
+      - name: Commit updated ride data
+        run: |
+          git config user.name "strava-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/rides.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Update ride data from Strava"
+            git push
+          fi

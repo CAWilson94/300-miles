@@ -8,7 +8,7 @@ const milesTarget = document.querySelector("#miles-target");
 const milesLeft = document.querySelector("#miles-left");
 const percentDone = document.querySelector("#percent-done");
 const rideCount = document.querySelector("#ride-count");
-const monthLabel = document.querySelector("#month-label");
+const rangeLabel = document.querySelector("#month-label");
 const rideSummary = document.querySelector("#ride-summary");
 
 const circumference = 2 * Math.PI * 100;
@@ -23,14 +23,6 @@ async function loadRideData() {
   return response.json();
 }
 
-function monthName(month) {
-  const [year, monthNumber] = month.split("-").map(Number);
-  return new Intl.DateTimeFormat("en-GB", {
-    month: "long",
-    year: "numeric",
-  }).format(new Date(year, monthNumber - 1, 1));
-}
-
 function formatDate(date) {
   return new Intl.DateTimeFormat("en-GB", {
     weekday: "short",
@@ -39,13 +31,40 @@ function formatDate(date) {
   }).format(new Date(`${date}T12:00:00`));
 }
 
+function formatRange(startDate, endDate) {
+  const start = new Date(`${startDate}T12:00:00`);
+  const end = new Date(`${endDate}T12:00:00`);
+  const sameYear = start.getFullYear() === end.getFullYear();
+
+  const startFmt = new Intl.DateTimeFormat("en-GB", {
+    day: "numeric",
+    month: "short",
+    year: sameYear ? undefined : "numeric",
+  }).format(start);
+
+  const endFmt = new Intl.DateTimeFormat("en-GB", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  }).format(end);
+
+  return `${startFmt} – ${endFmt}`;
+}
+
 function formatMiles(value) {
   return Number(value).toLocaleString("en-GB", {
     maximumFractionDigits: value % 1 === 0 ? 0 : 1,
   });
 }
 
-function renderProgress(totalMiles, targetMiles, rides, month) {
+function formatDuration(totalSeconds) {
+  const minutes = Math.round(totalSeconds / 60);
+  const hours = Math.floor(minutes / 60);
+  const mins = minutes % 60;
+  return hours > 0 ? `${hours}h ${mins}m` : `${mins}m`;
+}
+
+function renderProgress(totalMiles, targetMiles, rides, startDate, endDate) {
   const progress = targetMiles > 0 ? Math.min(totalMiles / targetMiles, 1) : 0;
   const percent = Math.round(progress * 100);
   const remaining = Math.max(targetMiles - totalMiles, 0);
@@ -58,7 +77,10 @@ function renderProgress(totalMiles, targetMiles, rides, month) {
   milesLeft.textContent = formatMiles(remaining);
   percentDone.textContent = `${percent}%`;
   rideCount.textContent = rides.length.toString();
-  monthLabel.textContent = monthName(month);
+
+  if (startDate && endDate) {
+    rangeLabel.textContent = formatRange(startDate, endDate);
+  }
 
   donut.setAttribute(
     "aria-label",
@@ -67,8 +89,8 @@ function renderProgress(totalMiles, targetMiles, rides, month) {
 
   rideSummary.textContent =
     rides.length === 1
-      ? `1 ride logged for ${monthName(month)}.`
-      : `${rides.length} rides logged for ${monthName(month)}.`;
+      ? "1 ride logged so far."
+      : `${rides.length} rides logged so far.`;
 }
 
 function renderRides(rides) {
@@ -78,7 +100,7 @@ function renderRides(rides) {
     const empty = document.createElement("p");
     empty.className = "empty-state";
     empty.textContent =
-      "No rides have been added for this month yet. Add your first Strava embed in data/rides.json.";
+      "No rides logged yet — check back once the first one's in.";
     rideGrid.append(empty);
     return;
   }
@@ -89,54 +111,36 @@ function renderRides(rides) {
     card.querySelector(".date").textContent = formatDate(ride.date);
     card.querySelector(".distance").textContent = `${formatMiles(ride.miles)} mi`;
 
-    const embedWrap = card.querySelector(".embed-wrap");
+    const elev = card.querySelector(".elev");
+    const time = card.querySelector(".time");
+    elev.textContent =
+      ride.elevationFt != null
+        ? `${Number(ride.elevationFt).toLocaleString("en-GB")} ft`
+        : "—";
+    time.textContent =
+      ride.movingSeconds != null ? formatDuration(ride.movingSeconds) : "—";
 
-    if (isValidStravaEmbed(ride.embedUrl)) {
-      const iframe = document.createElement("iframe");
-      iframe.title = `Strava activity: ${ride.title}`;
-      iframe.loading = "lazy";
-      iframe.allowTransparency = "true";
-      iframe.scrolling = "no";
-      iframe.src = ride.embedUrl;
-      embedWrap.append(iframe);
+    const link = card.querySelector(".ride-link");
+    if (ride.url) {
+      link.href = ride.url;
     } else {
-      embedWrap.append(createEmbedPlaceholder());
+      link.remove();
     }
 
     rideGrid.append(card);
   }
 }
 
-function isValidStravaEmbed(url) {
-  return /^https:\/\/www\.strava\.com\/activities\/\d+\/embed\/[a-zA-Z0-9]+/.test(
-    url || ""
-  );
-}
-
-function createEmbedPlaceholder() {
-  const placeholder = document.createElement("div");
-  placeholder.className = "embed-placeholder";
-  placeholder.innerHTML = `
-    <strong>Strava embed URL needed</strong>
-    <span>Paste a Strava iframe src, or wire up Strava sync later.</span>
-  `;
-  return placeholder;
-}
-
-function ridesForMonth(rides, month) {
-  return rides
-    .filter((ride) => ride.date.startsWith(month))
-    .sort((a, b) => new Date(b.date) - new Date(a.date));
-}
-
 try {
   const data = await loadRideData();
-  const activeMonth = data.month || new Date().toISOString().slice(0, 7);
   const targetMiles = Number(data.targetMiles || 300);
-  const rides = ridesForMonth(data.rides || [], activeMonth);
-  const totalMiles = rides.reduce((total, ride) => total + Number(ride.miles || 0), 0);
+  const rides = (data.rides || []).slice().sort((a, b) => (a.date < b.date ? 1 : -1));
+  const totalMiles =
+    data.totalMiles != null
+      ? Number(data.totalMiles)
+      : rides.reduce((total, ride) => total + Number(ride.miles || 0), 0);
 
-  renderProgress(totalMiles, targetMiles, rides, activeMonth);
+  renderProgress(totalMiles, targetMiles, rides, data.startDate, data.endDate);
   renderRides(rides);
 } catch (error) {
   rideSummary.textContent = "Ride data could not be loaded.";

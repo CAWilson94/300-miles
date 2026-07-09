@@ -340,7 +340,7 @@ h2 {
   gap: 16px;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 20px 22px;
+  padding: 20px 22px 14px;
 }
 
 .ride-meta h3 {
@@ -367,46 +367,57 @@ h2 {
   white-space: nowrap;
 }
 
-.embed-wrap {
+.ride-stats {
   display: grid;
-  place-items: stretch;
-  min-height: 360px;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  padding: 14px 22px;
   border-top: 1px solid var(--line);
-  background: #fff;
 }
 
-.embed-wrap iframe {
+.ride-stats div {
+  padding-right: 16px;
+}
+
+.ride-stats div + div {
+  padding-left: 16px;
+  border-left: 1px solid var(--line);
+}
+
+.ride-stats span {
   display: block;
-  width: 100%;
-  min-height: 405px;
-  border: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.01em;
 }
 
-.embed-placeholder {
-  display: grid;
-  place-content: center;
-  min-height: 405px;
-  padding: 28px;
+.ride-stats small {
+  display: block;
+  margin-top: 6px;
   color: var(--muted);
-  background:
-    radial-gradient(400px 200px at 50% 0%, var(--pink-soft), transparent 70%),
-    #fafaf8;
-  text-align: center;
-}
-
-.embed-placeholder strong {
-  display: block;
-  color: var(--navy-ink);
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.embed-placeholder span {
-  display: block;
-  max-width: 300px;
-  margin-top: 10px;
+  font-size: 0.72rem;
   font-weight: 500;
-  line-height: 1.5;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.ride-link {
+  display: block;
+  padding: 14px 22px;
+  border-top: 1px solid var(--line);
+  color: var(--pink-dark);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.ride-link:hover {
+  background: var(--pink-soft);
+}
+
+.ride-link::after {
+  content: " →";
 }
 
 .empty-state {

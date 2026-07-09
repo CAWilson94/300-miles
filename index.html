@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Monthly Cycling Progress</title>
+    <title>300 Miles for Cancer Research UK</title>
     <meta
       name="description"
-      content="A monthly cycling tracker with Strava ride embeds and a 300 mile progress target."
+      content="Follow my progress cycling 300 miles for Cancer Research UK, tracked live from Strava, and donate to the challenge."
     >
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,15 +33,15 @@
             Research&nbsp;UK
           </h1>
           <p class="intro">
-            Thanks for cheering me on. Every mile I ride this month raises money
-            for life-saving research — here's my progress, straight from Strava.
+            Thanks for cheering me on. Every mile I ride raises money for
+            life-saving research — here's my progress, tracked live from Strava.
           </p>
         </div>
       </header>
 
       <section class="progress-hero" aria-labelledby="progress-title">
         <div class="progress-widget" aria-labelledby="progress-title">
-          <p class="panel-label" id="progress-title">Monthly progress</p>
+          <p class="panel-label" id="progress-title">Challenge progress</p>
 
           <div
             class="donut"
@@ -103,7 +103,7 @@
 
       <section class="ride-section" aria-labelledby="rides-title">
         <div class="section-heading">
-          <h2 id="rides-title">Strava Rides</h2>
+          <h2 id="rides-title">Recent rides</h2>
           <p id="ride-summary">Loading rides...</p>
         </div>
         <div class="ride-grid" id="ride-grid"></div>
@@ -123,7 +123,19 @@
           </div>
           <strong class="distance"></strong>
         </div>
-        <div class="embed-wrap"></div>
+        <div class="ride-stats">
+          <div>
+            <span class="elev"></span>
+            <small>elevation</small>
+          </div>
+          <div>
+            <span class="time"></span>
+            <small>moving time</small>
+          </div>
+        </div>
+        <a class="ride-link" target="_blank" rel="noreferrer">
+          View on Strava
+        </a>
       </article>
     </template>
 
