@@ -64,6 +64,91 @@ function formatDuration(totalSeconds) {
   return hours > 0 ? `${hours}h ${mins}m` : `${mins}m`;
 }
 
+// Decodes a Google/Strava encoded polyline into [lat, lng] pairs.
+function decodePolyline(str) {
+  let index = 0;
+  let lat = 0;
+  let lng = 0;
+  const coords = [];
+
+  while (index < str.length) {
+    let shift = 0;
+    let result = 0;
+    let byte;
+    do {
+      byte = str.charCodeAt(index++) - 63;
+      result |= (byte & 0x1f) << shift;
+      shift += 5;
+    } while (byte >= 0x20);
+    lat += result & 1 ? ~(result >> 1) : result >> 1;
+
+    shift = 0;
+    result = 0;
+    do {
+      byte = str.charCodeAt(index++) - 63;
+      result |= (byte & 0x1f) << shift;
+      shift += 5;
+    } while (byte >= 0x20);
+    lng += result & 1 ? ~(result >> 1) : result >> 1;
+
+    coords.push([lat / 1e5, lng / 1e5]);
+  }
+
+  return coords;
+}
+
+// Builds an SVG route outline from an encoded polyline, or null if unusable.
+function buildRouteSvg(polyline) {
+  if (!polyline) return null;
+  const points = decodePolyline(polyline);
+  if (points.length < 2) return null;
+
+  const lats = points.map((p) => p[0]);
+  const lngs = points.map((p) => p[1]);
+  const minLat = Math.min(...lats);
+  const maxLat = Math.max(...lats);
+  const minLng = Math.min(...lngs);
+  const maxLng = Math.max(...lngs);
+
+  // Equirectangular projection — accurate enough over a single ride.
+  const cos = Math.cos(((minLat + maxLat) / 2) * (Math.PI / 180));
+  const projected = points.map(([la, ln]) => [
+    (ln - minLng) * cos,
+    maxLat - la, // flip so north is up
+  ]);
+
+  const width = Math.max(...projected.map((p) => p[0])) || 1;
+  const height = Math.max(...projected.map((p) => p[1])) || 1;
+
+  const W = 320;
+  const H = 150;
+  const pad = 16;
+  const scale = Math.min((W - 2 * pad) / width, (H - 2 * pad) / height);
+  const offsetX = (W - width * scale) / 2;
+  const offsetY = (H - height * scale) / 2;
+
+  const d = projected
+    .map(([x, y], i) => {
+      const px = (offsetX + x * scale).toFixed(1);
+      const py = (offsetY + y * scale).toFixed(1);
+      return `${i === 0 ? "M" : "L"}${px} ${py}`;
+    })
+    .join(" ");
+
+  const [sx, sy] = [
+    (offsetX + projected[0][0] * scale).toFixed(1),
+    (offsetY + projected[0][1] * scale).toFixed(1),
+  ];
+
+  return (
+    `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet">` +
+    `<path d="${d}" fill="none" stroke="var(--pink)" stroke-width="3" ` +
+    `stroke-linejoin="round" stroke-linecap="round"></path>` +
+    `<circle cx="${sx}" cy="${sy}" r="4" fill="var(--pink)"></circle>` +
+    `</svg>`
+  );
+}
+
 function renderProgress(totalMiles, targetMiles, rides, startDate, endDate) {
   const progress = targetMiles > 0 ? Math.min(totalMiles / targetMiles, 1) : 0;
   const percent = Math.round(progress * 100);
@@ -107,6 +192,15 @@ function renderRides(rides) {
 
   for (const ride of rides) {
     const card = template.content.firstElementChild.cloneNode(true);
+
+    const route = card.querySelector(".route");
+    const routeSvg = buildRouteSvg(ride.polyline);
+    if (routeSvg) {
+      route.innerHTML = routeSvg;
+    } else {
+      route.remove();
+    }
+
     card.querySelector("h3").textContent = ride.title;
     card.querySelector(".date").textContent = formatDate(ride.date);
     card.querySelector(".distance").textContent = `${formatMiles(ride.miles)} mi`;

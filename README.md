@@ -14,7 +14,7 @@ that talks to the Strava API, so no secrets ever live in the page itself.
 | --- | --- |
 | `index.html` | Page markup |
 | `styles.css` | All styling |
-| `app.js` | Reads `data/rides.json` and renders the ring, stats, and ride cards |
+| `app.js` | Reads `data/rides.json` and renders the ring, stats, and ride cards (including a route thumbnail drawn from each ride's Strava polyline) |
 | `data/rides.json` | The ride data the page displays (written by the Action) |
 | `scripts/fetch-strava.mjs` | Fetches rides from Strava and writes `data/rides.json` |
 | `.github/workflows/strava.yml` | Runs the fetch script on a schedule and commits the result |

@@ -335,6 +335,19 @@ h2 {
   box-shadow: 0 20px 44px -24px rgba(46, 45, 98, 0.5);
 }
 
+.route {
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(420px 160px at 50% 120%, var(--pink-soft), transparent 70%),
+    #fbf9fc;
+}
+
+.route svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .ride-meta {
   display: flex;
   gap: 16px;

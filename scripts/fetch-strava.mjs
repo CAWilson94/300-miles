@@ -99,6 +99,7 @@ function toRide(activity) {
     miles: round(activity.distance / METRES_PER_MILE, 1),
     elevationFt: round((activity.total_elevation_gain || 0) * FEET_PER_METRE),
     movingSeconds: activity.moving_time || 0,
+    polyline: (activity.map && activity.map.summary_polyline) || "",
     url: `https://www.strava.com/activities/${activity.id}`,
   };
 }
