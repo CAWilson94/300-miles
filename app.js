@@ -142,9 +142,9 @@ function buildRouteSvg(polyline) {
 
   return (
     `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet">` +
-    `<path d="${d}" fill="none" stroke="var(--pink)" stroke-width="3" ` +
+    `<path d="${d}" fill="none" stroke="#ee2a7b" stroke-width="3" ` +
     `stroke-linejoin="round" stroke-linecap="round"></path>` +
-    `<circle cx="${sx}" cy="${sy}" r="4" fill="var(--pink)"></circle>` +
+    `<circle cx="${sx}" cy="${sy}" r="4" fill="#ee2a7b"></circle>` +
     `</svg>`
   );
 }
