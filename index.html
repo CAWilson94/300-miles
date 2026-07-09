@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monthly Cycling Progress</title>
+    <meta
+      name="description"
+      content="A monthly cycling tracker with Strava ride embeds and a 300 mile progress target."
+    >
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="masthead">
+        <img
+          class="avatar"
+          src="profile.jpg"
+          alt="Charlotte ready to ride, in her helmet"
+          onerror="this.remove()"
+        >
+        <div class="masthead-text">
+          <p class="eyebrow" id="month-label">This month</p>
+          <h1 id="page-title">
+            Help me ride <span class="accent">300 miles</span> for Cancer
+            Research&nbsp;UK
+          </h1>
+          <p class="intro">
+            Thanks for cheering me on. Every mile I ride this month raises money
+            for life-saving research — here's my progress, straight from Strava.
+          </p>
+        </div>
+      </header>
+
+      <section class="progress-hero" aria-labelledby="progress-title">
+        <div class="progress-widget" aria-labelledby="progress-title">
+          <p class="panel-label" id="progress-title">Monthly progress</p>
+
+          <div
+            class="donut"
+            id="progress-donut"
+            role="img"
+            aria-label="0 miles completed out of 300"
+          >
+            <svg viewBox="0 0 240 240" aria-hidden="true">
+              <defs>
+                <linearGradient id="donut-gradient" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#ee2a7b"></stop>
+                  <stop offset="100%" stop-color="#f26aa0"></stop>
+                </linearGradient>
+              </defs>
+              <circle class="donut-track" cx="120" cy="120" r="100"></circle>
+              <circle
+                class="donut-fill"
+                id="donut-fill"
+                cx="120"
+                cy="120"
+                r="100"
+              ></circle>
+            </svg>
+            <div class="donut-center">
+              <span class="miles">
+                <span id="miles-done">0</span><span class="target" id="miles-target">/ 300</span>
+              </span>
+              <span class="unit">miles ridden</span>
+            </div>
+          </div>
+
+          <div class="stats">
+            <div>
+              <span id="percent-done">0%</span>
+              <small>complete</small>
+            </div>
+            <div>
+              <span id="miles-left">300</span>
+              <small>miles left</small>
+            </div>
+            <div>
+              <span id="ride-count">0</span>
+              <small>rides</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="donation-callout" aria-label="Fundraising link">
+        <p>Every mile is for a good cause — thank you for backing me.</p>
+        <a
+          href="https://fundraise.cancerresearchuk.org/page/cycle-300-miles-challenge"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Donate now
+        </a>
+      </section>
+
+      <section class="ride-section" aria-labelledby="rides-title">
+        <div class="section-heading">
+          <h2 id="rides-title">Strava Rides</h2>
+          <p id="ride-summary">Loading rides...</p>
+        </div>
+        <div class="ride-grid" id="ride-grid"></div>
+      </section>
+
+      <footer class="site-footer">
+        <p>Ride data from Strava · Fundraising for Cancer Research UK</p>
+      </footer>
+    </main>
+
+    <template id="ride-card-template">
+      <article class="ride-card">
+        <div class="ride-meta">
+          <div>
+            <h3></h3>
+            <p class="date"></p>
+          </div>
+          <strong class="distance"></strong>
+        </div>
+        <div class="embed-wrap"></div>
+      </article>
+    </template>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>

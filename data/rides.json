@@ -1,0 +1,18 @@
+{
+  "month": "2026-07",
+  "targetMiles": 300,
+  "rides": [
+    {
+      "title": "Example morning spin",
+      "date": "2026-07-03",
+      "miles": 24.7,
+      "embedUrl": ""
+    },
+    {
+      "title": "Example cafe loop",
+      "date": "2026-07-06",
+      "miles": 38.2,
+      "embedUrl": ""
+    }
+  ]
+}
