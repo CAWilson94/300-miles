@@ -2,9 +2,29 @@
   "targetMiles": 300,
   "startDate": "2026-07-01",
   "endDate": "2026-07-31",
-  "totalMiles": 67.8,
-  "updatedAt": "2026-07-11T13:42:00.331Z",
+  "totalMiles": 79.6,
+  "updatedAt": "2026-07-11T16:39:56.765Z",
   "rides": [
+    {
+      "id": 19270294950,
+      "title": "Afternoon Ride",
+      "date": "2026-07-11",
+      "miles": 8,
+      "elevationFt": 289,
+      "movingSeconds": 3716,
+      "polyline": "mqytI|d`[r@lAHj@rA|Bh@jAv@tAhBtD^j@FPJJ@J_FnOeAzBq@fAyBtBqBtCONu@dAi@|@Yz@uApCiBrEQ`@K\\u@lBk@tA]l@YfAcA~Bi@dAg@h@iAZWNe@j@u@jAQFKLIBIH}AvBiCtCaCjB[RoAdAm@N[GYOEM?MGe@QSE?MPQJa@Su@O_FJy@F[Fa@Ro@^IBOLETM\\GXa@hCMt@Qh@iD`EGZe@jAi@vBqA|C_@n@aAbAQ\\Un@{@dEsAdI]vAWtAKt@Of@k@~IY|CCr@eAfOId@Ef@GR?PUpBc@`DSp@ShA]rAkBdG_AtB_AdByArBkBtBs@n@WN_@b@c@VUHWTYNy@XaAR_@A{AUULa@z@MFiBXcBHmAVmA@i@FkA`@gBd@cCx@e@R}Az@aAt@s@l@qAtA_CtCy@dACJw@~@CDAFCAy@fAOLOVc@h@_CtCGDk@x@QNWHMLI@]Xm@LcA^OHEJGEI@MJI@}Ap@sA\\W@KNk@Nw@j@Y^Ob@Mh@u@jCSx@Uh@q@|BMVUt@MLKVS^KJAF[\\o@b@cB~@aA^w@TqB^yAGq@LYNUFECqBb@wAPIFkADwGz@sCNa@JcBJo@JoN^WCoCD_ACoFe@]Ia@L@OSCwRgBYEOGkAK{F@EA_ADME_CDs@F}AAK@eE?uBBWCiGJMAEE_AFk@?aA?_@Ei@M}@KMEM?e@UsBYaBYUBULc@_@YCIGyAKsAUO@g@[KCODKA]Uc@Qk@M]Qm@m@gA{@aBeBOKSCYWyAsBGKCWc@_AQMQc@SSa@w@[UGOAUEIGE[g@GCK@?CAA_@eA]_@YSm@Y?CYW@@IKY]k@c@CGEAk@o@OCq@_@gACi@Ow@e@K?OLOKc@CIKQAi@Fe@NEDwBb@qBZg@DmD?wCMKF?JGLC@KGQSYKaCQ]H}Ax@yAn@I@{@QiBi@yA[o@?m@Fy@Pk@AuA]oAk@k@MeAOaBg@YGw@DcAu@aEmDuB_Bi@]{@Qk@?e@LYLaBlA{B`CU\\KVq@fBg@`B[p@}BzDCFBVIAKMKLO\\OVY\\g@`@a@VIBON{ChBy@\\{@Pe@?o@OoAg@a@UUUkDaEYWe@O[BQDQJUV_@l@cAxAYRi@JeFk@iEQB@MGYCS?C??BEa@GA",
+      "url": "https://www.strava.com/activities/19270294950"
+    },
+    {
+      "id": 19271383001,
+      "title": "Afternoon Ride",
+      "date": "2026-07-11",
+      "miles": 3.8,
+      "elevationFt": 98,
+      "movingSeconds": 1532,
+      "polyline": "_qkuIhni[jBLjBTbC\\V?^H`@?RE^[|AaC\\]XM^E^FXNLLrAtAV^`AfAn@j@vAj@p@JX@\\Ex@Ql@Y~E_DLQb@_@f@s@LUHIXi@nAqBl@uA\\_Al@kB^}@~@gAl@i@z@_AvA_Ad@KZEj@DPD|@^lAjAlBzA|AzAjA`AZD|@FvBn@nB\\~@\\LLz@Tb@DTAz@Sp@Ex@?bCn@f@Jh@R\\BPCj@Ud@WB?JKJENKn@SLMJCbA@bAHXFVRNGHKJC`@FrBFp@LnB?n@GTAb@SVCvD{@P?`B[dACRCj@HVHp@^dDjCzCzBv@^NP`@Jt@Pp@Jd@@^FA@j@@lAMt@Kh@Bh@ATGb@WVUFEFAFFBLAj@AoAR_BPs@RkAn@sBj@yBN{@FmAFuBCqFCYOaA?KJQLGD?nAr@`@F`@@NBp@?hBMb@DJAbAa@DEx@]j@QZMPENM\\MzB{@NAPOH@@Ak@RYFWJHALGh@KLQPCj@HRCl@U`@_@D?BFJr@HhAHNJJTAJETBXE`@?d@Gj@@JBNFVBFLd@`@JDFAFELYLo@LmBNs@Xu@PU^}@BfC`@n@Tj@Fn@@jBl@xBDV@pACZ?d@C`@I`CGbHd@~JPxARbA",
+      "url": "https://www.strava.com/activities/19271383001"
+    },
     {
       "id": 19229083842,
       "title": "Afternoon Ride",
