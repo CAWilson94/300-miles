@@ -2,9 +2,19 @@
   "targetMiles": 300,
   "startDate": "2026-07-01",
   "endDate": "2026-07-31",
-  "totalMiles": 79.6,
-  "updatedAt": "2026-07-13T19:38:51.088Z",
+  "totalMiles": 96.8,
+  "updatedAt": "2026-07-13T19:47:22.267Z",
   "rides": [
+    {
+      "id": 19299398175,
+      "title": "Evening Ride",
+      "date": "2026-07-13",
+      "miles": 17.2,
+      "elevationFt": 466,
+      "movingSeconds": 5648,
+      "polyline": "iwysIhahYeGkP_A}AOAoA|V@tFZ|FMnAkFjAoE\\y@WiBkB{AKgCfBeGjGcIpDuErAkCcAyImEaGkDaLsD{Lq@oBcA{@gBMH_@zB?lCeA\\}B~EcAFmCkDaGcOu@yCuAaDMiBJmA]S{@Fw@w@kAKu@}Dj@PaEfHo@~Aq@tEYnCm@fQBuACYKH@xIXlAGh@q@lC@dNk@nCBb@fBKHb@aAvH_AhFoBpR}A`ZYfMa@bHLv@aA~F]jEO`@MGNmB_AzDg@vEwBhP}@tFcBdIsA`FoH~RoCnIwAdCmC|GwAvEQfAkCtHgDbN_AlBu@~Do@~AqAlFu@dFuAfGy@tGYlAYl@c@Rg@r@{@tByAnBq@tAoJnMsBpHuGfSo@`ENlDOr@yClImAfFkArC@VOC?e@Q@u@tAc@Js@lEC|CzBjPGhMMb@JxEd@r@wA}AqAjDaCjKaAvF}@lBCpDsApCJl@VLnABp@a@PRX~A`@h@kAe@WLa@q@_B_@?_BtAeDHyDt@sBfB_JbB}GbAkCl@f@FQHeNuAqOq@wCEyEHs@|@gDn@c@b@eAVRLIjCoHnDeMK}D\\oBlB{GdFsOdEaJlHqJrAqBbAeC|@mAzEmYrD_N|G}T~@{DlA}CdAwDnLcZpGaRbCuKlBqLdCcR^{Dh@}AZHrA{KMc@d@sKJgF~Ao[lA{NfAwG|AkMyBq@t@yA?uDKsOh@mBAaI\\oCFwDl@_Ht@sE|EsKW?IhAPpAz@r@dAGdBrCTlAfBnDrA~FzDzJjC|DDf@u@xCtAlAJd@MfED|@v@|@Vt@j@dEt@zAThCEr@SZ{BRWl@}@\\cAvA_@rB]nt@^hC?bCSRUfAMpD[rTcBzM}@pFB`@a@xC}Mjt@C|@JlAb@nAfUt\\OGIHl@fA@bAUv@}AfBqC~EgBdAuIx@qA|@yAWqBV{@OMLAp@OV{@MiCf@cBM_Ap@s@mBYFc@p@WjABlDIR]HYA?YlBqAkAw@RoBl@aAxAKRe@VFx@dApAHdBc@bBC^]`DAxBL|@y@vH{@hAa@vAwAfC}EdAcAZcAnCq@nB_ExF{FxC}EtAmEN_Bd@Y`@_Cz@uBxB_JpGaUXyAM}CpBmC`CcP|GofA|Bwf@GcB`@iBrAaNd@uCj@cKH_@TEh@^nBQ`IqDjAs@~EmFzCmBnADdCzBv@\\rKaBZYB_@YkFC{DFeEZqEJGxA`A`CfFNCfBoCh@j@",
+      "url": "https://www.strava.com/activities/19299398175"
+    },
     {
       "id": 19270294950,
       "title": "Cycle with Dan 😀",
