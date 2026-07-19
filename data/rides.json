@@ -3,8 +3,18 @@
   "startDate": "2026-07-01",
   "endDate": "2026-07-31",
   "totalMiles": 129.4,
-  "updatedAt": "2026-07-19T13:39:00.648Z",
+  "updatedAt": "2026-07-19T19:15:30.300Z",
   "rides": [
+    {
+      "id": 19378478209,
+      "title": "Afternoon Ride",
+      "date": "2026-07-19",
+      "miles": 0,
+      "elevationFt": 0,
+      "movingSeconds": 91,
+      "polyline": "",
+      "url": "https://www.strava.com/activities/19378478209"
+    },
     {
       "id": 19336384532,
       "title": "120/300 ☕️☕️",
