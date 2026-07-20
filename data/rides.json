@@ -2,9 +2,19 @@
   "targetMiles": 300,
   "startDate": "2026-07-01",
   "endDate": "2026-07-31",
-  "totalMiles": 129.4,
-  "updatedAt": "2026-07-20T19:50:34.857Z",
+  "totalMiles": 142.8,
+  "updatedAt": "2026-07-20T20:07:29.341Z",
   "rides": [
+    {
+      "id": 19393659873,
+      "title": "Evening Ride",
+      "date": "2026-07-20",
+      "miles": 13.4,
+      "elevationFt": 407,
+      "movingSeconds": 4390,
+      "polyline": "c`zsIrogYkBoDaCmCgAoB]}ABsB{@oB{@i@uAe@iBQa@^eCWRoIi@B_A]c@_Aq@aAy@oC_@oCk@oPKSExAJUSWwFaBKe@HYa@sCI@r@jN`@~Ll@xIdCzYp@nOAzCyCCKn@BfASB_By@kCq@cCsAy@Qa@hAKnAQNoAwAqDiCcOkJq@VaAm@QBKVuBfN@d@IBh@mEtAkIJ[RKx@b@RX?h@y@|ESzBeF~\\YPyL{@iAk@cBaCKJgApGaD`ISLuBkC{BaFgDwIaAwE_AqBCg@~AsDf@wBVQVDL^EnCDbA\\vAZfAo@bE[l@OKmAqC][uAsCEkBJcAVk@i@gAYu@C]xAwFj@wAtCgDtFaNz@_Dx@eETs@NsAZgA_@JA]JODJCT_BEG~@CFA_@e@`EiA`F}CvH}AfC_Ap@gDnDgB~C]PcEcKk@_DP_AMwJLeICKk@WqB{Co@}A_@mBYeCI?[v@aAhFQ|BItH}@fIGhBRnAX`AjAjAp@vBhAhF\\bEj@jA`AtJX`AoAlJ_@zJW`BGhBN~CKpAFl@_@pC@fNEfAu@rBW`@wEVEnBBnPk@`ILr@j@t@H\\CfAQl@QRc@Fm@a@i@oASMmA@_@PaAfAmCxDeD|BuA`@qB@kC}@eBtC?h@b@~CL~DhHnAAX^JjCB\\O^q@|Cv@HLEXFTf@w@v@iHVcA`CkGn@sAl@_ARaAZaDNCp@s@Z_AlAyLf@wCjBoN[W}A?j@uAJw@EYKwFAsFLcE\\qA@wH^eDFoE\\yDdA_HzEaKV}Ab@yApB}CbFqFdBcCxCiG`AkDf@wCZ}Cy@q@e@_DaBwRk@{IQ{AkBqYY_AjAkE`@uB|@yCvAgGp@iFZuAR[rCx@Fj@OfCKwAJLAqAKUcCWQL]lA_AbEe@`DcBvFOzAaAhFCr@lEvl@zAfRR|@l@^GtAq@nEk@zBy@`CyAfDcBtCoB`BuDhE}AlCa@xB_@j@K`@@\\pAdCl@Ox@r@bAAdAp@B^]bAD`ALh@hA`C~@~EdE|JjB`DxAjBzBuFzByIfOyv@`@qAt@iAt@c@xADtFrB`ClA`ACz@`Aj@RdP|DfAj@tEfAJTh@g@v@ZlCY|@nTCj@WF?PfABPYOYOPH\\bDRJNAVILICCWd@c@TyHFUNMxHPLJCf@_AxFDRlDNV}BZ?~@b@`Dj@bBz@f@l@zAtDNNrBcDv@`B",
+      "url": "https://www.strava.com/activities/19393659873"
+    },
     {
       "id": 19378478209,
       "title": "Pedal boat",
