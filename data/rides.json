@@ -3,11 +3,11 @@
   "startDate": "2026-07-01",
   "endDate": "2026-07-31",
   "totalMiles": 129.4,
-  "updatedAt": "2026-07-19T19:15:30.300Z",
+  "updatedAt": "2026-07-20T03:45:49.501Z",
   "rides": [
     {
       "id": 19378478209,
-      "title": "Afternoon Ride",
+      "title": "Pedal boat",
       "date": "2026-07-19",
       "miles": 0,
       "elevationFt": 0,
