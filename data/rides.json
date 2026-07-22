@@ -2,9 +2,19 @@
   "targetMiles": 300,
   "startDate": "2026-07-01",
   "endDate": "2026-07-31",
-  "totalMiles": 142.8,
-  "updatedAt": "2026-07-22T11:21:54.626Z",
+  "totalMiles": 162.8,
+  "updatedAt": "2026-07-22T11:24:44.654Z",
   "rides": [
+    {
+      "id": 19416121598,
+      "title": "Morning Ride",
+      "date": "2026-07-22",
+      "miles": 20,
+      "elevationFt": 535,
+      "movingSeconds": 6265,
+      "polyline": "cxysI|_hYsH_SuDcESr@HiAsDnU{LW}@lARQGWcD_@@w@VNAd@mECOzBqAeXYeAkEQig@{NcBhAi@`ByOdw@}@dG{DhIyB}BaHeQkAgFeBuEFgC{E_Au@qFPf@TUf@yBAq@_EkKYiCy@k@eHzBiAw@oAmDeHwKcQoTeIwIcEaGHu@e@kBWOo@~@]rCeM~e@gCqCmEwJaEdGuJl@w@dCkA`BpAgC\\kBFj@a@|AeEzFEhEcB^c@fF@zFc@vAgAx@[xG}@J]_A}@KdAMGoDqIuAuAkAsBUu@d@nBg@BaGiE|EuAnCc@dEHwCeBmKuBeIG}Cv@{DvBsH|DoIZ{AoBoID_K{CkGeBmILcAjA_A|Bg@fCmDtByAbEsAlGi@~CiBlA{A\\iAt@YxAuBrAuFp@qH`AoAd@@hClB~BAbGkDdCiEvAoDh@gCTqFSeFo@aD{AmBsDgDIwCp@qC[kFd@eCz@a@pAVlAo@pC|AjDJjBq@`CoCnCwFrCyIh@qEJyDx@gDAkDfGqP~@MfC`CnAXrPmCiQhCoAc@gBmBu@IaHhQ?fEu@tCu@tKyDlKmBtD_CnC_Bf@}EM{BwAuCX}@f@YhEb@|Dg@dF`@jAhF`Fn@nCVbDEhE[~Cy@xCcBjD{BlDkB~AaCz@wC?wB_BiAd@a@hAaAlJm@|Bi@fAcBtAaArBuBlB_C~@kHd@cCbAgBlAyCnEaAr@_A{@[iApBe@pAaEcClD\\cBnBoAwAdEqBb@TdAv@|@vAo@_CXkA`AQx@vBrJjCnFKhI`B|HLdB[vAyEvJeBzFq@bDLfElBtGjB|Ma@vEgAnDaA|H@jJQtBOrUq@jL]lBaCtGaAnIeDnOyTtR]lA[zDe@zJiDbC_BpBiCdF_BvFmFlIoBlEeBvHg@~DS`S]`LmFhWs@fGHpEdChEvBpHvDlIv@n@Aj@x@nDpDlHzDjA|Eg@|@f@hGzOh@tIc@mIgFgOgBqAcFjAwCmAcAqAcD_Hm@eEc@QcD{G}DsLeAoA[{AFsCz@mIrEmTb@aGHeWn@wFvBwI`BiDvDiFxG{P`C_DzCsBh@sMp@_EnBk@xEfD`@?n@}@pAeF~AcDjA{DnEqRn@oHtCkI^aCbAy`@MqMVeDxBeLPgF~BkEvFkFt@[bB^b@uBfB_@Et@f@|BF_@~DwDPsAp@[j@_BpEaGrARpByDlJSjEmGpDjIxAzB`An@~Kad@\\WnAkFpFvKbOjQoA`_@W|E|U`HNj@CpC",
+      "url": "https://www.strava.com/activities/19416121598"
+    },
     {
       "id": 19393659873,
       "title": "142.8/300 🥵",
