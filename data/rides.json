@@ -3,11 +3,11 @@
   "startDate": "2026-07-01",
   "endDate": "2026-07-31",
   "totalMiles": 165.6,
-  "updatedAt": "2026-07-22T19:36:27.731Z",
+  "updatedAt": "2026-07-23T03:30:24.627Z",
   "rides": [
     {
       "id": 19416121598,
-      "title": "Morning Ride",
+      "title": "162.82/300 🍰",
       "date": "2026-07-22",
       "miles": 20,
       "elevationFt": 535,
@@ -17,7 +17,7 @@
     },
     {
       "id": 19416400871,
-      "title": "Lunch Ride",
+      "title": "165.6/300 🚲",
       "date": "2026-07-22",
       "miles": 2.8,
       "elevationFt": 105,
