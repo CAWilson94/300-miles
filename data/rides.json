@@ -3,7 +3,7 @@
   "startDate": "2026-07-01",
   "endDate": "2026-07-31",
   "totalMiles": 201.7,
-  "updatedAt": "2026-07-25T17:44:28.912Z",
+  "updatedAt": "2026-07-25T19:18:02.608Z",
   "rides": [
     {
       "id": 19459645494,
@@ -37,7 +37,7 @@
     },
     {
       "id": 19462505041,
-      "title": "Evening Ride",
+      "title": "201/300 🚲",
       "date": "2026-07-25",
       "miles": 4.4,
       "elevationFt": 75,
