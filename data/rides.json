@@ -2,9 +2,19 @@
   "targetMiles": 300,
   "startDate": "2026-07-01",
   "endDate": "2026-07-31",
-  "totalMiles": 201.7,
-  "updatedAt": "2026-07-28T19:42:01.902Z",
+  "totalMiles": 211.8,
+  "updatedAt": "2026-07-28T22:12:42.288Z",
   "rides": [
+    {
+      "id": 19505439175,
+      "title": "Evening Ride",
+      "date": "2026-07-28",
+      "miles": 10.1,
+      "elevationFt": 138,
+      "movingSeconds": 3454,
+      "polyline": "uxysI~~gYwB}FMe@]i@Ug@Oa@OUQa@QQQk@W]SOAPIN?HGDEZDL?JBHB`@CV@RGd@ET@TAbACF?VCLAhAG\\IDCPLM?[DWJGJ?h@N^^VX\\p@nAzCFA^g@Tm@r@_AFCLFf@rA`AzCZv@B@DADI?Gl@iA",
+      "url": "https://www.strava.com/activities/19505439175"
+    },
     {
       "id": 19459645494,
       "title": "Lunch Ride",
