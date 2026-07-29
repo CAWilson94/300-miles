@@ -2,9 +2,19 @@
   "targetMiles": 300,
   "startDate": "2026-07-01",
   "endDate": "2026-07-31",
-  "totalMiles": 211.8,
-  "updatedAt": "2026-07-29T19:26:56.649Z",
+  "totalMiles": 215.4,
+  "updatedAt": "2026-07-29T22:42:07.858Z",
   "rides": [
+    {
+      "id": 19521137052,
+      "title": "Afternoon Ride",
+      "date": "2026-07-29",
+      "miles": 3.6,
+      "elevationFt": 66,
+      "movingSeconds": 1156,
+      "polyline": "kdysIzrhYH?d@M\\St@u@t@kAPa@TiA^kCx@_Hb@_C^eAv@_Bp@iAl@qAXw@`BqGRm@dBeEx@_ChAoEh@kC^}BPm@KGc@cAk@gA[a@SQq@iAs@wAg@u@wAuAQWAe@Do@?g@CaAEk@Ke@iAmCgAuCMc@Ku@CkCIq@K]g@}CUoBKgDD{BDeFDgVLyHDwHFmEBc@BINKn@FNAFKHqIJeAAIm@{Al@pOKDTd@j@vBXvACTEFG@eAKMEIO?{@ByA?s@E]OCq@DIBEHCX@z@CjBAdFDjAC~BChBCfFCz@E|GE~DKtFA|BHpDHxAFt@PfAz@dEBb@?r@B|@RjAx@|B~@rBXz@J`@NjA@n@?d@E~@?^nAlAr@|@jDrFh@l@Lh@@t@iAvH]vAWp@g@~Ae@nA_BxCe@rAOZM\\g@vBuA|EMZcBjDa@rA[|AYbBOh@G\\AJJNB`@QpBMp@m@jBmBlC",
+      "url": "https://www.strava.com/activities/19521137052"
+    },
     {
       "id": 19505439175,
       "title": "211/300!🌧️",
