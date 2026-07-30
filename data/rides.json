@@ -2,8 +2,8 @@
   "targetMiles": 300,
   "startDate": "2026-07-01",
   "endDate": "2026-07-31",
-  "totalMiles": 229.6,
-  "updatedAt": "2026-07-30T19:42:41.918Z",
+  "totalMiles": 242.8,
+  "updatedAt": "2026-07-30T20:40:14.668Z",
   "rides": [
     {
       "id": 19525667050,
@@ -34,6 +34,16 @@
       "movingSeconds": 1051,
       "polyline": "_`ysIvohYPe@|@iBPy@Hk@`@qDJc@b@sETeA\\cA`B_D|AqDl@_Cp@sCxCmHx@iCh@mCb@{Cf@iBO_Am@cA_AmAO]_AyAe@k@GEkA}Ae@[MOEWFuA?o@CeACUWeAYu@{AgDW}@CqAI_AAyA]sA[iB]sCEi@GwCHaD?_EJcJAaABeJF_GJ_OJUNGr@DLODoAFwHMw@YcALRCBGUJL\\tAH`@AXEl@MtICHq@Ae@DCFCX?tDArAA`FKvPIzD?lDGdEEnHFvBBf@\\xCf@bBTbAB^?lBDv@DPNp@dBhEt@fCHz@@r@KbB?T@Dh@^LJjAvAr@jAzAvBl@`AZ^Tf@Bz@E\\K\\c@pCK^Sd@]zBQj@o@fB{BjFm@lBYpAiApDsAtDu@dAq@|Bm@`Da@pCg@lEShAC?g@f@]l@w@bA",
       "url": "https://www.strava.com/activities/19528630313"
+    },
+    {
+      "id": 19534197318,
+      "title": "Evening Ride",
+      "date": "2026-07-30",
+      "miles": 13.2,
+      "elevationFt": 203,
+      "movingSeconds": 3725,
+      "polyline": "{q_tIji}XJXd@{@F{@OyA`@qBDBx@pDxDtQBt@Wz@e@p@a@KEL@j@b@nBD|Ak@|Cg@lADVRH\\t@ZPLhAaAn@uNzAaB]sBuB{@BoAnCoEhMFzCKdAi@nBQtEq@rEoErLuAlCeApAiA~@eAToE[{BqAwAv@oAYm@`@SZUlB?p@HhA^bBDdAY|@[zBnAxBnD|Cn@zA\\bDJzEKbBaA`F}AlEyC`FiAr@cDjAyBA_CcBm@?a@\\g@fAaAnJq@fC]t@eAjAq@Jk@hBUVwAnAmBbAcCf@wDRmDpAyBhB_CfDwB`@y@t@O^?t@vAhGz@lCxA~BVfAMlHTnBlAfFDr@Cp@YdAuB|DeBrEi@vCk@bAU`Be@fANfE^`ALjAz@xBz@tHl@lCInCSpA{AbGm@pHBzGSjC@zHUnICjHa@hFYdA_@p@yBdHe@~CIbCkA~DwB~KwAnEuB`G_B`Cs@FgAQwCeBw@NWXw@|Ba@vMUnAiEbDqAbBoB|DeBtG{BtDyBvCiChG[lAKhAc@|Aq@zHHpCa@|VsBdJmBdKeApGA`EZrAjBrCl@dBxArFhB~CfA~Cn@\\CVDXv@zCdAfBb@nA`B`CfBnA|A@f@UhCU^@x@v@p@rAfEfL\\vBHxBG~AF?AkD_@}CmCqHuBcFkAk@}A@kAdAc@FoCq@u@g@wEsIc@sCB{@[AQUsAuDeBeDgCeIwBsDKmBF_BbAoId@}Ah@mD~BaLVcDLqE?aOLwCh@oEzByJ`ByDvBoCnBaD~BqHxBmEbAyAbEoCRgABwD^{H`@{Ap@o@t@AnEnCd@FNC`@cAXAPk@d@iDrBsD|@iCpBqIzAuH`@cEb@oCtCcHZmBVuJCgCP_LCuENiBGuGJyBt@sG`AmDR{ABeEUs@e@mCc@}DgAwD_@oCI_Dn@}AP_Bp@cAPmArAqEvDgIC_AOw@uAkGIiBP_FK_Ac@eAw@_Aw@aBeBgI?{@Ra@lA{@hB]|CaExAmAnDoAzDUzDm@d@YfCuCXeAfAo@xA}Bp@eClAeKf@{@dAUxBlBtAFz@SlBy@|BkBfDcG|@oCj@uCJaDMmG_@aCe@iAmAiAuBkAi@}@EYLgDNq@CiA]sC@gATcCjAo@bAVvAm@nC`BdEHpB_AvAgBhCiFnCwHd@{Bf@{Ih@qBLmA?mCpBaG`DaI`AAbB`BtBl@|KiAnBe@\\k@KqAYWWkA@i@r@oCByBqJo`@",
+      "url": "https://www.strava.com/activities/19534197318"
     },
     {
       "id": 19521137052,
