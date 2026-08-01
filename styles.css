@@ -443,6 +443,225 @@ h2 {
   text-align: center;
 }
 
+/* ---------- Celebration banner ---------- */
+.celebration-banner {
+  position: relative;
+  margin-bottom: 22px;
+  padding: clamp(32px, 5vw, 52px) clamp(24px, 4vw, 44px);
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-ink) 100%);
+  color: #fff;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+}
+
+.confetti-wrap {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -16px;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  opacity: 0;
+  animation: confetti-fall var(--dur, 3.5s) var(--delay, 0s) ease-in infinite;
+}
+
+@keyframes confetti-fall {
+  0%   { opacity: 1; transform: translateY(0) rotate(0deg); }
+  90%  { opacity: 1; }
+  100% { opacity: 0; transform: translateY(var(--drop, 340px)) rotate(var(--spin, 360deg)); }
+}
+
+.celebration-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.celebration-eyebrow {
+  margin: 0 0 10px;
+  color: var(--pink);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.celebration-heading {
+  margin: 0 0 10px;
+  font-size: clamp(2.2rem, 6vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+
+.celebration-sub {
+  margin: 0 0 32px;
+  color: rgba(255,255,255,0.65);
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+}
+
+.fund-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.fund-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.fund-amount {
+  font-size: clamp(1.7rem, 4.5vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: #fff;
+}
+
+.fund-cell--total .fund-amount {
+  color: var(--pink);
+}
+
+.fund-label {
+  color: rgba(255,255,255,0.55);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.fund-divider {
+  color: rgba(255,255,255,0.3);
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 18px;
+}
+
+/* ---------- Photo mosaic ---------- */
+.photo-mosaic {
+  margin-top: 44px;
+}
+
+.mosaic-grid {
+  columns: 3;
+  column-gap: 12px;
+}
+
+.mosaic-item {
+  break-inside: avoid;
+  margin-bottom: 12px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+  position: relative;
+}
+
+.mosaic-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 300ms ease, filter 300ms ease;
+}
+
+.mosaic-item:hover img {
+  transform: scale(1.03);
+  filter: brightness(1.06);
+}
+
+/* ---------- Lightbox ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(10, 10, 20, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  animation: lb-in 200ms ease;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+@keyframes lb-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.lightbox-img {
+  max-width: min(90vw, 900px);
+  max-height: 88vh;
+  border-radius: var(--radius);
+  object-fit: contain;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 150ms ease;
+}
+
+.lightbox-close:hover {
+  background: rgba(255,255,255,0.22);
+}
+
+@media (max-width: 720px) {
+  .mosaic-grid {
+    columns: 2;
+  }
+
+  .fund-row {
+    gap: 14px;
+  }
+
+  .fund-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .mosaic-grid {
+    columns: 2;
+    column-gap: 8px;
+  }
+
+  .mosaic-item {
+    margin-bottom: 8px;
+  }
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
   margin-top: 40px;

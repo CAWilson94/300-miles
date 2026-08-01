@@ -2,12 +2,12 @@
   "targetMiles": 300,
   "startDate": "2026-07-01",
   "endDate": "2026-07-31",
-  "totalMiles": 129.4,
-  "updatedAt": "2026-07-17T08:20:55.257Z",
+  "totalMiles": 300,
+  "updatedAt": "2026-08-01T00:00:00.000Z",
   "rides": [
     {
       "id": 19336384532,
-      "title": "120/300 ☕️☕️",
+      "title": "120/300 \u2615\ufe0f\u2615\ufe0f",
       "date": "2026-07-16",
       "miles": 3.9,
       "elevationFt": 75,
@@ -37,7 +37,7 @@
     },
     {
       "id": 19313517079,
-      "title": "116.7/300 🚲",
+      "title": "116.7/300 \ud83d\udeb2",
       "date": "2026-07-14",
       "miles": 19.9,
       "elevationFt": 449,
@@ -47,7 +47,7 @@
     },
     {
       "id": 19299398175,
-      "title": "96.8/300 👀",
+      "title": "96.8/300 \ud83d\udc40",
       "date": "2026-07-13",
       "miles": 17.2,
       "elevationFt": 466,
@@ -57,7 +57,7 @@
     },
     {
       "id": 19270294950,
-      "title": "Cycle with Dan 😀",
+      "title": "Cycle with Dan \ud83d\ude00",
       "date": "2026-07-11",
       "miles": 8,
       "elevationFt": 289,
@@ -107,7 +107,7 @@
     },
     {
       "id": 19176479921,
-      "title": "25/300 🚴",
+      "title": "25/300 \ud83d\udeb4",
       "date": "2026-07-04",
       "miles": 5.6,
       "elevationFt": 118,
@@ -117,7 +117,7 @@
     },
     {
       "id": 19178166855,
-      "title": "30/300 🥳",
+      "title": "30/300 \ud83e\udd73",
       "date": "2026-07-04",
       "miles": 5.7,
       "elevationFt": 138,
@@ -127,7 +127,7 @@
     },
     {
       "id": 19164624895,
-      "title": "20/300 (miles) 🥳",
+      "title": "20/300 (miles) \ud83e\udd73",
       "date": "2026-07-03",
       "miles": 10.3,
       "elevationFt": 361,

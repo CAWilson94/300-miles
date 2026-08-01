@@ -1,3 +1,100 @@
+// ---------- Photo mosaic ----------
+const PHOTOS = [
+  "IMG_2106.jpg","IMG_2109.jpg","IMG_2296.jpg","IMG_2299.jpg",
+  "IMG_2316.jpg","IMG_2370.jpg","IMG_2371.jpg","IMG_2386.jpg",
+  "IMG_2390.jpg","IMG_2395.jpg","IMG_2398.jpg","IMG_2486.jpg",
+  "IMG_2492.jpg","IMG_2502.jpg","IMG_2507.jpg","IMG_2517.jpg",
+  "IMG_2518.jpg","IMG_2522.jpg","IMG_2527.jpg","IMG_2545.jpg",
+  "IMG_2546.jpg","IMG_2548.jpg","IMG_2550.jpg","IMG_2552.jpg",
+  "IMG_1955.jpg","IMG_1994.jpg",
+  "att.BiB5WbX39vjYPldn1qjCP10Iz-iDkL1BjvXt1O1xQSc.jpg",
+  "att.XbWuqbRFeiXODX1GdmEPkr_fL3KcgSyIPeg0-ui1dCw.jpg",
+  "755941458_995544506813089_7121931135504848845_n.jpg",
+];
+
+const mosaicGrid = document.querySelector("#mosaic-grid");
+const lightbox = document.querySelector("#lightbox");
+const lightboxImg = document.querySelector("#lightbox-img");
+const lightboxClose = document.querySelector("#lightbox-close");
+
+function renderMosaic() {
+  if (!mosaicGrid) return;
+  mosaicGrid.textContent = "";
+
+  PHOTOS.forEach((filename, i) => {
+    const a = document.createElement("a");
+    a.className = "mosaic-item";
+    a.href = `photos/${filename}`;
+    a.setAttribute("aria-label", `Cycle photo ${i + 1}`);
+
+    const img = document.createElement("img");
+    img.src = `photos/${filename}`;
+    img.alt = `Cycle photo ${i + 1}`;
+    img.loading = "lazy";
+    img.decoding = "async";
+
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.hidden = false;
+      lightboxClose.focus();
+    });
+
+    a.append(img);
+    mosaicGrid.append(a);
+  });
+}
+
+if (lightboxClose) {
+  lightboxClose.addEventListener("click", () => { lightbox.hidden = true; });
+}
+if (lightbox) {
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) lightbox.hidden = true;
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !lightbox.hidden) lightbox.hidden = true;
+  });
+}
+
+// ---------- Confetti burst ----------
+function launchConfetti() {
+  const wrap = document.querySelector("#confetti-wrap");
+  if (!wrap) return;
+
+  const COLORS = [
+    "#ee2a7b","#f26aa0","#ffd700","#fff","#a78bfa","#34d399","#60a5fa"
+  ];
+  const COUNT = 48;
+
+  for (let i = 0; i < COUNT; i++) {
+    const span = document.createElement("span");
+    span.className = "confetti-piece";
+    const left = Math.random() * 100;
+    const dur = 2.8 + Math.random() * 2.4;
+    const delay = Math.random() * 3;
+    const drop = 260 + Math.random() * 180;
+    const spin = (Math.random() > 0.5 ? 1 : -1) * (180 + Math.random() * 360);
+    const color = COLORS[Math.floor(Math.random() * COLORS.length)];
+    const size = 5 + Math.round(Math.random() * 6);
+
+    span.style.cssText = [
+      `left:${left}%`,
+      `--dur:${dur}s`,
+      `--delay:${delay}s`,
+      `--drop:${drop}px`,
+      `--spin:${spin}deg`,
+      `background:${color}`,
+      `width:${size}px`,
+      `height:${size}px`,
+      `border-radius:${Math.random() > 0.5 ? "50%" : "2px"}`,
+    ].join(";");
+
+    wrap.append(span);
+  }
+}
+
 const rideGrid = document.querySelector("#ride-grid");
 const template = document.querySelector("#ride-card-template");
 const donut = document.querySelector("#progress-donut");
@@ -224,6 +321,10 @@ function renderRides(rides) {
     rideGrid.append(card);
   }
 }
+
+// Render mosaic and confetti immediately (doesn't depend on ride data)
+renderMosaic();
+launchConfetti();
 
 try {
   const data = await loadRideData();

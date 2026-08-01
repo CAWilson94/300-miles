@@ -32,17 +32,42 @@
           onerror="this.remove()"
         >
         <div class="masthead-text">
-          <p class="eyebrow" id="month-label">This month</p>
+          <p class="eyebrow" id="month-label">July 2026</p>
           <h1 id="page-title">
-            Help me ride <span class="accent">300 miles</span> for Cancer
+            I rode <span class="accent">300 miles</span> for Cancer
             Research&nbsp;UK
           </h1>
           <p class="intro">
-            Thanks for cheering me on. Every mile I ride raises money for
-            life-saving research - here's my progress, tracked live from Strava.
+            The challenge is complete — and it wouldn't have been possible without
+            everyone who donated and cheered me on. Here's how it went.
           </p>
         </div>
       </header>
+
+      <section class="celebration-banner" aria-label="Challenge complete">
+        <div class="confetti-wrap" id="confetti-wrap" aria-hidden="true"></div>
+        <div class="celebration-inner">
+          <p class="celebration-eyebrow">Goal achieved ✓</p>
+          <h2 class="celebration-heading">300 miles done!</h2>
+          <p class="celebration-sub">Thank you for every single penny 🙏</p>
+          <div class="fund-row">
+            <div class="fund-cell">
+              <span class="fund-amount">£602</span>
+              <span class="fund-label">raised</span>
+            </div>
+            <div class="fund-divider" aria-hidden="true">+</div>
+            <div class="fund-cell">
+              <span class="fund-amount">£95.50</span>
+              <span class="fund-label">gift aid</span>
+            </div>
+            <div class="fund-divider" aria-hidden="true">=</div>
+            <div class="fund-cell fund-cell--total">
+              <span class="fund-amount">£697.50</span>
+              <span class="fund-label">total impact</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section class="progress-hero" aria-labelledby="progress-title">
         <div class="progress-widget" aria-labelledby="progress-title">
@@ -96,7 +121,7 @@
       </section>
 
       <section class="donation-callout" aria-label="Fundraising link">
-        <p>Every mile is for a good cause, thanks for backing me! </p>
+        <p>Still want to donate? Every pound goes straight to life-saving research. 💗</p>
         <a
           href="https://fundraise.cancerresearchuk.org/page/cycle-300-miles-challenge"
           target="_blank"
@@ -106,9 +131,22 @@
         </a>
       </section>
 
+      <section class="photo-mosaic" aria-labelledby="photos-title">
+        <div class="section-heading">
+          <h2 id="photos-title">300 miles in photos</h2>
+        </div>
+        <div class="mosaic-grid" id="mosaic-grid"></div>
+      </section>
+
+      <!-- Lightbox overlay -->
+      <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close photo">✕</button>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="">
+      </div>
+
       <section class="ride-section" aria-labelledby="rides-title">
         <div class="section-heading">
-          <h2 id="rides-title">Recent rides</h2>
+          <h2 id="rides-title">All rides</h2>
           <p id="ride-summary">Loading rides...</p>
         </div>
         <div class="ride-grid" id="ride-grid"></div>
